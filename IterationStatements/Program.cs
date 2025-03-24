@@ -11,39 +11,44 @@ namespace IterationStatements
             // Use the example given to guide your implementation.
 
             //Create a List called "numbers" - DONE!
-            List<int> numbers = new List<int>();  //DO NOT ERASE THIS! You will use this in the exercise.
+            var numbers = new List<int>();  //DO NOT ERASE THIS! You will use this in the exercise.
             
             //-----START HERE------------------------------------------
 
             //TODO - Create a variable of type int and name it "num"
             //TODO - Initialize the variable with a value of 0
 
+            var num = 0;
+
 
 
             //TODO - Create a do-while loop using the existing brackets as a template.
-            // The existing brackets are placeholders for your loop code.
-            // Inside this loop:
-            // a) Increment "num" by 1
-            // b) Then add "num" to the collection "numbers"
-            //    Hint: Use "numbers.Add(num);" to add the current value of "num" to the list.
+            do
+
+                // The existing brackets are placeholders for your loop code.
+                // Inside this loop:
+                // a) Increment "num" by 1
+                num++;
+                // b) Then add "num" to the collection "numbers"
+                //    Hint: Use "numbers.Add(num);" to add the current value of "num" to the list.
 
             {
                 // Your code goes here
-                numbers.Add(/*num*/); //uncomment out `num` to add it to the collection "numbers"
-            } 
-            //TODO - Continue the loop while "num" is less than 100
+                numbers.Add(num); //uncomment out `num` to add it to the collection "numbers"
+            } while (num < 100); //Continue the loop while "num" is less than 100
             
 
             //TODO - Create a while loop using the existing brackets as a template.
             //TODO - Continue the loop while "num" is less than 200
-            // The existing brackets are placeholders for your loop code.
-            // Inside this loop:
-            // a) Increment "num" by 1
-            // b) Then add "num" to the collection "numbers"
-            //    Hint: You can copy how this was done in the do-while loop
-
+            while(num < 200)
             {
-                // Your code goes here
+                // The existing brackets are placeholders for your loop code.
+                // Inside this loop:
+                // a) Increment "num" by 1
+                num++;
+                // b) Then add "num" to the collection "numbers"
+                //    Hint: You can copy how this was done in the do-while loop
+                numbers.Add(num);
             }
             
 
@@ -55,8 +60,11 @@ namespace IterationStatements
             //TODO - Create a foreach loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
             // Inside this loop, print each number in "numbers".
+
+
+            foreach (var number in numbers)
             {
-                // Your code goes here
+                Console.WriteLine(number);
             }
              
 
@@ -74,6 +82,8 @@ namespace IterationStatements
             //    - Less than or equal to the number of items in "numbers" (use "numbers.Count")
             //    - Greater than or equal to 0
             // c) Decrement "i" by 1 in each iteration
+            
+            for(int i = 199; i <= numbers.Count && i >= 0; i--)
 
             {
                 //TODO - Inside the loop, place numbers[i] inside of the Console.WriteLine() method
